@@ -1,0 +1,59 @@
+@baseUrl = http://localhost:3000
+@urlPath = api/v1
+
+###
+GET {{baseUrl}}/{{urlPath}}/signout
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/currentuser
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+POST {{baseUrl}}/{{urlPath}}/signup
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "fullName": "testee mario gagaga",
+  "password": "teste123",
+  "email": "teste@kaa.com",
+  "role": "seller"
+}
+
+###
+POST {{baseUrl}}/{{urlPath}}/signin
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "email": "teste@kaa.com",
+  "password": "teste123"
+}
+
+###
+POST {{baseUrl}}/{{urlPath}}/forgot-password
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "email": ""
+}
+
+###
+POST {{baseUrl}}/{{urlPath}}/reset-password/<token>
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "password": "",
+  "confirmPassword": ""
+}
